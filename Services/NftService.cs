@@ -1,11 +1,11 @@
 ﻿using System.Numerics;
 using AutoMapper;
-using FundingContract.FundingContract;
+// using FundingContract.FundingContract;
 using Microsoft.AspNetCore.Identity;
 using Nethereum.RPC.Accounts;
 using Nethereum.Web3;
 using NftApi.Entities;
-using NftContract.NftContract;
+// using NftContract.NftContract;
 using NftApi.Helpers;
 using NftApi.Interfaces;
 
@@ -17,8 +17,8 @@ namespace NftApi;
 public class NftService : INftService
 {
     // private readonly IUserRepository _userRepository;
-    private readonly NftContractService _nftContractService;
-    private readonly FundingContractService _fundingContractService;
+    // private readonly NftContractService _nftContractService;
+    // private readonly FundingContractService _fundingContractService;
     private readonly IUnitOfWork _uow;
     private readonly UserManager<User> _userManager;
     // private readonly INftRepository _nftRepository;
@@ -40,8 +40,8 @@ public class NftService : INftService
         IMapper mapper, IImageService imageService)
     {
         // _userRepository = userRepository;
-        _nftContractService = new NftContractService(new Web3(_admin, _blockchainProvider), _contractAddress);
-        _fundingContractService = new FundingContractService(new Web3(_admin, _blockchainProvider), _fundingContractAddress);
+        // _nftContractService = new NftContractService(new Web3(_admin, _blockchainProvider), _contractAddress);
+        // _fundingContractService = new FundingContractService(new Web3(_admin, _blockchainProvider), _fundingContractAddress);
         _userManager = userManager;
         // _nftRepository = nftRepository;
         _mapper = mapper;
