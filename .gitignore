@@ -272,3 +272,10 @@ __pycache__/
 # tools/
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
+
+# .NET secrets
+**/appsettings.json
+**/appsettings.Development.json
+
+# MacOS .DS_Store
+**/.DS_Store
