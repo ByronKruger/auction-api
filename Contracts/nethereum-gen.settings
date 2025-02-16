@@ -1,7 +1,0 @@
-{
-    "projectName": "FundingContract",
-    "namespace": "FundingContract",
-    "lang": 0,
-    "autoCodeGen": true,
-    "projectPath": "../Contracts/FundingContract"
-}
