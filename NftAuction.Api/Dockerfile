@@ -16,5 +16,6 @@ RUN dotnet publish -c release -o /app
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
+COPY ./nftapp.db /app/nftapp.db
 COPY --from=build /app ./
 ENTRYPOINT ["dotnet", "NftApi.dll"]
