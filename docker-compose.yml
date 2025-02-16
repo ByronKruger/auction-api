@@ -4,20 +4,23 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
-    depends_on:
-      - nftDatabase
+    # working_dir: /app
+    # depends_on:
+    #   - nftDatabase
+    # volumes:
+    #   - $(pwd)/nftapp.db:.
     environment:
       MY_ENV_VAR_NAME: value321
 
-  migrations1:
-    # container_name: service-migrations
-    # image: service-migrations
-    build:
-      context: .
-      dockerfile: Data/Dockerfile
-      # target: migrations
-    depends_on:
-        - nftDatabase
+  # migrations1:
+  #   # container_name: service-migrations
+  #   # image: service-migrations
+  #   build:
+  #     context: .
+  #     dockerfile: Data/Dockerfile
+  #     # target: migrations
+  #   depends_on:
+  #       - nftDatabase
 
   # cleanup:
   #   # container_name: service-migrations
@@ -29,16 +32,16 @@ services:
   #   depends_on:
   #       - nftDatabase
     
-  nftDatabase:
-    image: mysql
-    container_name: mysql
-    volumes:
-      - db-volume13:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: secret123
-      MYSQL_DATABASE: nftdb
-    ports:
-      - 3307:3306
+  # nftDatabase:
+  #   image: mysql
+  #   container_name: mysql
+  #   volumes:
+  #     - db-volume13:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: secret123
+  #     MYSQL_DATABASE: nftdb
+  #   ports:
+  #     - 3307:3306
 
-volumes:
-  db-volume13:
+# volumes:
+#   db-volume13:
